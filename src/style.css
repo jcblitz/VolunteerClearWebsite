@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply font-sans antialiased;
+  }
+}
+
+@layer utilities {
+  /* Image optimization utilities */
+  .lazy-load {
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+  }
+  
+  .lazy-load.loaded {
+    opacity: 1;
+  }
+  
+  /* Performance optimization for animations */
+  .will-change-transform {
+    will-change: transform;
+  }
+  
+  .will-change-opacity {
+    will-change: opacity;
+  }
+}
